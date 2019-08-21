@@ -1,0 +1,110 @@
+body {
+  background-color:#dff0ea;
+  margin: 0;
+  position: relative;
+  box-sizing: border-box;
+  
+}
+
+.passing-date {
+  background-color: #b0a48a;
+  color:#34857f;
+  font-family: 'IBM Plex Serif', serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 auto;
+  position: relative;
+  padding: 10px;
+  top: -30px;
+  width: 98.5%;
+  text-align: center;
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+  -moz-box-shadow: 0 10px 6px -6px #777;
+  box-shadow: 0 10px 6px -6px #777;
+
+}
+
+.past-events {
+  padding-top: 30px;
+  text-align: left;
+  width: 60%;
+  margin: 0 auto;
+  background-color:#ececec;
+  color:#5c5f5f;
+  font-size: .8rem;
+  position: relative;  
+  min-height: 100vh;  
+  height: 100%;   
+  -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+     -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+          box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.event {
+  background-color: #f1efe9;
+  margin: 0 auto 30px;
+  padding-top: 60px;
+  padding: 40px;
+  border-radius: 1px;
+  position: relative;
+  width: 87%;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.event-title,
+.event-time{
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+  -moz-box-shadow: 0 10px 6px -6px #777;
+  box-shadow: 0 10px 6px -6px #777;
+  color: #34857f;
+  background-color: #b4ad9f;
+  position: absolute;
+  padding: 2px 10px;
+}
+.event-title{
+  font-weight: 500;
+  font-size: 1.2rem;
+  top:0;
+  left:0;
+}
+.event-time{
+  font-size: 0.7rem;
+  font-weight: 600;
+  bottom:0px;
+  right:0;
+}
+
+
+@media screen and (max-width: 1300px) {
+
+  /* .past-events {
+      width: 60%;
+  } */
+
+  .event {
+      width: 86%;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+
+  .event {
+    width: 85%;
+}
+.past-events {
+  width: 65%;
+}
+
+
+}
+
+@media screen and (max-width: 853px) {
+
+  .event {
+    width: 85%;
+}
+.past-events {
+  width: 65%;
+}
+}
