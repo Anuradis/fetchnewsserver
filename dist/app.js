@@ -42,8 +42,8 @@ let displayPastEvents = (currentDate) => {
       eventsTitle.innerHTML = `${el.title}<br/>`;
       eventsDate.innerHTML = `${renderDate} ${time}`
       event.appendChild(eventsDate);
-      event.insertBefore(eventsTitle, event.firstChild);
       event.insertBefore(eventsParagraph, event.firstChild);
+      event.insertBefore(eventsTitle, event.firstChild);
     }
     return Date.parse(el.date) > currentDate.getTime();
   });
