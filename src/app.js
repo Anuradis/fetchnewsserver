@@ -10,7 +10,7 @@ let footer = document.querySelector(".footer")
 
 Element.prototype.appendAfter = function (element) {
   element.parentNode.insertBefore(this, element.nextSibling);
-},false;
+}, false;
 
 
 let url = 'http://localhost:7000'
@@ -45,7 +45,7 @@ let displayPastEvents = (currentDate) => {
       eventsParagraph.className = "event-description";
       eventsParagraph.innerHTML = `${el.description} <br/>`;
       eventsTitle.innerHTML = `${el.title}<br/>`;
-      eventsDate.innerHTML = `${renderDate} ${time}`
+      eventsDate.innerHTML = `${renderDate} ${time}`;
       event.appendChild(eventsDate);
       event.insertBefore(eventsParagraph, event.firstChild);
       event.insertBefore(eventsTitle, event.firstChild);
