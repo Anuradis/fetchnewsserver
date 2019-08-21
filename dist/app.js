@@ -5,7 +5,7 @@ stopTime.setDate(stopTime.getDate() + 10);
 stopTime = stopTime.getTime();
 
 let dateParagraph = document.querySelector(".passing-date");
-let pastEvents = document.querySelector(".past-events");
+let pastEvents = document.querySelector(".events-container");
 
 
 let url = 'http://localhost:7000'
@@ -31,17 +31,19 @@ let displayPastEvents = (currentDate) => {
     if ((Date.parse(el.date) < currentDate.getTime()) && el.title != "") {
       let event = document.createElement("div");
       event.className = "event";
-      event.innerHTML = `${el.description} <br/>`;
       pastEvents.appendChild(event);
       let eventsTitle = document.createElement("span");
+      let eventsParagraph = document.createElement("p");
       let eventsDate = document.createElement("span");
       eventsTitle.className = "event-title";
-      eventsDate.className = "event-time"
+      eventsDate.className = "event-time";
+      eventsParagraph.className = "event-description";
+      eventsParagraph.innerHTML = `${el.description} <br/>`;
       eventsTitle.innerHTML = `${el.title}<br/>`;
       eventsDate.innerHTML = `${renderDate} ${time}`
       event.appendChild(eventsDate);
-      
       event.insertBefore(eventsTitle, event.firstChild);
+      event.insertBefore(eventsParagraph, event.firstChild);
     }
     return Date.parse(el.date) > currentDate.getTime();
   });
