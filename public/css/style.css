@@ -22,6 +22,7 @@ body {
   -webkit-box-shadow: 0 10px 6px -6px #777;
   -moz-box-shadow: 0 10px 6px -6px #777;
   box-shadow: 0 10px 6px -6px #777;
+  animation: slide-down 1s ease;
 
 }
 
@@ -51,6 +52,7 @@ body {
   -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
   -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  animation: slide-up 2s ease;
 }
 .event-title,
 .event-time{
@@ -67,12 +69,14 @@ body {
   font-size: 1.2rem;
   top:0;
   left:0;
+  animation: slide-right 1.5s ease;
 }
 .event-time{
   font-size: 0.7rem;
   font-weight: 600;
   bottom:0px;
   right:0;
+  animation: slide-left 1.5s ease;
 }
 .event-description{
 padding: 10px 20px;
@@ -80,10 +84,7 @@ padding: 10px 20px;
 
 
 @media screen and (max-width: 850px) {
-
-  .event-description{
-  font-size: 0.6rem;
-  }
+ 
   .event {
       width: 95%;
       padding: 5% 0;
@@ -92,6 +93,9 @@ padding: 10px 20px;
     font-weight: 500;
     font-size: 1rem;
 }
+.event-description{
+  font-size: 0.6rem;
+  }
 .event-time{
   font-size: 0.6rem;
 }
@@ -99,11 +103,13 @@ padding: 10px 20px;
 
 @media screen and (max-width: 650px) {
   .passing-date{
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
-
+  .events-container{
+    width: 100%;
+  }
   .event-description{
-  font-size: 0.4rem;
+  font-size: 0.7rem;
   }
   .event {
       width: 94%;
@@ -114,7 +120,7 @@ padding: 10px 20px;
     display: block;
     padding: 0 3%;
     font-weight: 500;
-    font-size: 0.7rem;
+    font-size: 1rem;
     bottom: 0;
     left:0;
 }
@@ -124,9 +130,51 @@ padding: 10px 20px;
   display: block;
   background-color:transparent;
   padding:0 0 1px 0;
-  font-size: 0.4rem;
+  font-size: 0.7rem;
   font-weight: 600;
   bottom:0px;
   right:0;
 }
+}
+
+@keyframes slide-up {
+  0% {
+      opacity: 0;
+      transform: translateY(100px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes slide-down {
+  0%{
+    opacity: 0;
+    transform: translateY(-200px); 
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+@keyframes slide-right {
+  0%{
+    opacity: 0;
+    transform: translateX(-100px);  
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+@keyframes slide-left {
+  0%{
+    opacity: 0;
+    transform: translateX(100px);  
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
 }
