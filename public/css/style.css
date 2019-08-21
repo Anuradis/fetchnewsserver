@@ -8,6 +8,7 @@ body {
 
 .passing-date {
   background-color: #b0a48a;
+  border-radius: 1px;
   color:#34857f;
   font-family: 'IBM Plex Serif', serif;
   font-size: 1.2rem;
