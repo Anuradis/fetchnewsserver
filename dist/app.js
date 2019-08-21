@@ -36,9 +36,7 @@ let displayPastEvents = (currentDate) => {
     if ((Date.parse(el.date) < currentDate.getTime()) && el.title != "") {
       let event = document.createElement("div");
       event.className = "event";
-      event.appendAfter(dateParagraph)
-      // pastEvents.insertBefore(event, footer)
-      // pastEvents.appendChild(event);
+      event.appendAfter(dateParagraph);
       let eventsTitle = document.createElement("span");
       let eventsParagraph = document.createElement("p");
       let eventsDate = document.createElement("span");
@@ -70,7 +68,7 @@ let displayDate = (currentDate) => {
 
 
   if (currentDate.getTime() < stopTime) {
-    currentDate.setSeconds(currentDate.getSeconds() + 100);
+    currentDate.setSeconds(currentDate.getSeconds() + 50);
     time = `${currentDate.getHours() < 10 ? "0"+currentDate.getHours():currentDate.getHours()}:${currentDate.getMinutes() < 10 ? "0"+currentDate.getMinutes():currentDate.getMinutes() }:${currentDate.getSeconds() < 10 ? "0"+currentDate.getSeconds():currentDate.getSeconds()}`
     dateParagraph.innerHTML = `${renderDate} <br/>${time}`;
 

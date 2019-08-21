@@ -1,4 +1,4 @@
 module.exports = {
   mode: 'production',
-  entry: "./dist/index.js"
+  entry: "./dist/app.js"
 };
