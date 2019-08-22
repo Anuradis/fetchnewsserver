@@ -1,19 +1,19 @@
-let fetchedData, date, time;
+let fetchedData, time, date;
 
 let stopTime = new Date();
 stopTime.setDate(stopTime.getDate() + 10);
 stopTime = stopTime.getTime();
 
-let dateParagraph = document.querySelector(".passing-date");
-let pastEvents = document.querySelector(".events-container");
-let footer = document.querySelector(".footer")
+const dateParagraph = document.querySelector(".passing-date");
+const pastEvents = document.querySelector(".events-container");
+const footer = document.querySelector(".footer")
 
 Element.prototype.appendAfter = function (element) {
   element.parentNode.insertBefore(this, element.nextSibling);
 }, false;
 
 
-let url = 'http://localhost:7000'
+const url = 'http://localhost:7000'
 
 fetch(url)
   .then(response => {
@@ -31,15 +31,15 @@ fetch(url)
 
 
 
-let displayPastEvents = (currentDate) => {
+const displayPastEvents = (currentDate) => {
   fetchedData = fetchedData.filter(el => {
     if ((Date.parse(el.date) < currentDate.getTime()) && el.title != "") {
-      let event = document.createElement("div");
+      const event = document.createElement("div");
       event.className = "event";
       event.appendAfter(dateParagraph);
-      let eventsTitle = document.createElement("span");
-      let eventsParagraph = document.createElement("p");
-      let eventsDate = document.createElement("span");
+      const eventsTitle = document.createElement("span");
+      const eventsParagraph = document.createElement("p");
+      const eventsDate = document.createElement("span");
       eventsTitle.className = "event-title";
       eventsDate.className = "event-time";
       eventsParagraph.className = "event-description";
@@ -55,7 +55,7 @@ let displayPastEvents = (currentDate) => {
 
 }
 
-let displayDate = (currentDate) => {
+const displayDate = (currentDate) => {
   const day = currentDate.getDay();
   const year = currentDate.getFullYear();
   const month = currentDate.getMonth();
