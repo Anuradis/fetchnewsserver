@@ -1,5 +1,6 @@
 # fetchnewsserver 
-
+fetchnewsserver is a small app which fetches the news from the server and displays them on the website accordingliy to the time they occur. 
+ 
 To open the project follow the steps below:
 
 Preconditions: 
