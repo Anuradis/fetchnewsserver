@@ -5,7 +5,7 @@ To open the project follow the steps below:
 Preconditions: 
 Node installed (my version 10.15.3)
 
-1.Clone the project and open it your computer using any code editor.
+1. Clone the project and open it your computer using any code editor.
 
 2. Open CLI and execute commands:
   * cd to the project repository
