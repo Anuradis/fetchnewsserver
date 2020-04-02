@@ -158,3 +158,4 @@ var server=http.createServer((function(request,response)
 }));
 
 server.listen(7000);
+console.log("Server is running at 7000")
